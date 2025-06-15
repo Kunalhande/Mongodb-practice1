@@ -17,22 +17,12 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User",userSchema);
 
-
-User.findByIdAndDelete("684e672e6da325b07ee7a367")
+User.findOneAndUpdate({email:"om@gmail.com"},{new: true})
 .then((res)=>{
     console.log(res)
 }).catch((err) =>{
     console.log(err)
 });
-
-
-
-// User.findOneAndUpdate({name: "ram" },{email:"ram@gmail.com"},{new: true})
-// .then((res)=>{
-//     console.log(res)
-// }).catch((err) =>{
-//     console.log(err)
-// });
 
 // User.find({age : {$gte : 40}})
 //    .then((res) => {
