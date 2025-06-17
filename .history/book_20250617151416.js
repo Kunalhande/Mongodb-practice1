@@ -33,18 +33,18 @@ const bookSchema = new mongoose.Schema({
 
 const book = mongoose.model("book",bookSchema);
 
-// book.findByIdAndUpdate("68512e2bc15a95586bc093b5",{price:-100}, {runValidators: true})
-// .then((res) =>{
-//     console.log(res)
-// })
-//   .catch((err) =>{
-//     console.log(err.errors.price.properties.message);
-//   });
+book.findByIdAndUpdate("68512e2bc15a95586bc093b5",{price:-100}, {runValidators: true})
+.then((res) =>{
+    console.log(res)
+})
+  .catch((err) =>{
+    console.log(err.errors.price.properties.message);
+  });
 
 let book1 = new book({  
-    title:"Marvel comics 2",
+    title:"Marvel comics",
     author:"john",
-    price:1000,
+    price:500,
     disccount:50,
     category:"fiction",
 });
